@@ -3,7 +3,7 @@ from typing import Callable
 
 
 def generator_numbers(text: str):
-    pattern = r"\d+\.\d+" # шаблон, що відповідає числу float
+    pattern = r" \d+\.\d+ " # шаблон, що відповідає числу float
     match = findall(pattern, text) # знаходимо усі входження дійсних чисел у тексті і створюємо з них список
     for num in match:
         yield float(num) # повертаємо усі дійсні числа як генератор
